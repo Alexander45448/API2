@@ -17,7 +17,7 @@ var UserController = {
             if (notUnique.length != 0)
                 throw "Email or username already registered"
 
-            let hashedPassword = await bcrypt.hash(req.body.password, process.env.SALT)
+            let hashedPassword = await bcrypt.hash(req.body.password, parselnt(process.env.SALT))
 
             let newUser = new User({
                 fullname: req.body.fullname,
