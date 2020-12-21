@@ -27,8 +27,9 @@ mongoose.connect(process.env.MONGO_URI, {
       process.exit(1);
   });
 
-  var userRoutes = require('./routes/UserRouter') 
+var userRoutes = require('./routes/UserRouter')
 
+// http://localhost:3000/users
 app.use('/users', userRoutes)
 
 // catch 404 and forward to error handler
